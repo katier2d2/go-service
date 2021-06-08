@@ -22,7 +22,7 @@ FROM alpine:3.12
 ARG BUILD_DATE
 ARG VCS_REF
 COPY --from=build_sales-api /service/private.pem /service/private.pem
-COPY --from=build_sales-api /service/app/sales-api/sales-api /service/sales-api
+COPY --from=build_sales-api /service/app/sales-api /service/sales-api
 WORKDIR /service
 CMD ["./sales-api"]
 
